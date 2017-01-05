@@ -32,8 +32,8 @@ before_install:
   - export cwd=$(pwd)
   - export SCRIPTS=$cwd/travis
   - export EXTERNALS_TOP=$cwd/ext
-  - $SCRIPTS/travis_get_externals.sh
   - $SCRIPTS/travis_get_qt.sh
+  - $SCRIPTS/travis_get_externals.sh
   - export BUILD_DIR=$cwd/build
   - export SV_TEST_DIR=$HOME/test/
   - if $BUILD_TEST; then $SCRIPTS/travis_get_test_data.sh; fi
