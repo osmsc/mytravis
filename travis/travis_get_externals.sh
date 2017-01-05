@@ -21,6 +21,7 @@ popd
 
 pushd $EXTERNALS_TOP/bin/gnu-4.8/x64
 for i in $EXTERNALS_TOP/tarfiles/linux.gnu-4.8.x64.*.tar.gz; do
-    tar xvzf $i
+    echo "untarring ($i)..."
+    tar xzf $i
 done
 popd

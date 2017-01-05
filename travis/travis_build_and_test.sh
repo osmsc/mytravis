@@ -1,10 +1,10 @@
 #!/bin/bash
 
 set -e
-MAKE="make --jobs=$NUM_THREADS --keep-going"
-MAKE_TEST="xvfb-run -a make test ARGS=-V"
 
 if $WITH_CMAKE; then
+  MAKE="make --jobs=$NUM_THREADS --keep-going"
+  MAKE_TEST="xvfb-run -a make test ARGS=-V"
   mkdir -p $BUILD_DIR
   cd $BUILD_DIR
   CMAKE_BUILD_ARGS=""
@@ -26,7 +26,7 @@ if $WITH_CMAKE; then
 else
     echo "Building with just make (i.e. NOT cmake!)"
     pushd BuildWithMake
-    $MAKE
+    make --keep-going
     popd
 fi
 
