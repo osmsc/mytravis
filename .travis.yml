@@ -20,6 +20,7 @@ addons:
     packages:
     - libglu1-mesa-dev
     - libxt-dev
+    - libxi-dev
 
     sources:
     - ubuntu-toolchain-r-test
