@@ -2,7 +2,8 @@ dist: trusty
 sudo: required
 
 env:
-  - WITH_CMAKE=false BUILD_SOLVER=false BUILD_TEST=false
+  - WITH_CMAKE=true BUILD_TEST=false
+#  - WITH_CMAKE=false BUILD_TEST=false
 
 matrix:
  allow_failures:
@@ -35,6 +36,7 @@ before_install:
   - $SCRIPTS/travis_get_qt.sh
   - $SCRIPTS/travis_get_externals.sh
   - export BUILD_DIR=$cwd/build
+  - export SV_CODE_DIR=$cwd/Code
   - export SV_TEST_DIR=$HOME/test/
   - if $BUILD_TEST; then $SCRIPTS/travis_get_test_data.sh; fi
   - echo "CLUSTER=x64_linux" > BuildWithMake/cluster_overrides.mk
