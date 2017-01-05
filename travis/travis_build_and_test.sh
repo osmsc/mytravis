@@ -24,6 +24,9 @@ if $WITH_CMAKE; then
   cd -
 
 else
-    echo "Not supported yet"
-
+    echo "Building with just make (i.e. NOT cmake!)"
+    pushd BuildWithMake
+    $MAKE
+    popd
 fi
+
