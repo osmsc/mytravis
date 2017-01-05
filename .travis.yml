@@ -31,7 +31,7 @@ before_install:
   - export NUM_THREADS=4
   - export cwd=$(pwd)
   - export SCRIPTS=$cwd/travis
-  - export EXTERNALS_TOP=/home/travis/external
+  - export EXTERNALS_TOP=$cwd/ext
   - $SCRIPTS/travis_get_externals.sh
   - export BUILD_DIR=$cwd/build
   - export SV_TEST_DIR=$HOME/test/
